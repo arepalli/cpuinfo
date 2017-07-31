@@ -1,4 +1,4 @@
-Challenge:
+# Challenge:
 - [] The task for this challenge is to read the Linux CPU information from /proc/cpuinfo and display it
 using QML.
 - [] The data visualization, including UI layout and design, is up to you—be creative!

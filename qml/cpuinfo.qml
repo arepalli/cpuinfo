@@ -24,7 +24,7 @@ ApplicationWindow {
         anchors.fill: parent
         width: parent.width - 20
         height: parent.height
-        highlightMoveVelocity: 1000
+        highlightMoveDuration: 500
 
         onContentYChanged: {
             if (!flicking)

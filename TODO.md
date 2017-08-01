@@ -1,3 +1,7 @@
+# 0.0.1:
+- [ ] Fix HardCoded values like processor count, keys count and Keys column width.
+
+
 # Challenge:
 - [x ] The task for this challenge is to read the Linux CPU information from /proc/cpuinfo and display it
 using QML.

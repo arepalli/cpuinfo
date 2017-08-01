@@ -9,10 +9,10 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.1
 
+
 ApplicationWindow {
     id: window
     visible: true
-    property int processorCount: cpuInfoView.count/26 //TODO: set this count correctly
 
     width: 600
     height: 480
@@ -44,12 +44,12 @@ ApplicationWindow {
         anchors.right: parent.right
         anchors.bottom: parent.bottom
         onActivated: {
-            if (processorCount > 0)
-                cpuInfoView.currentIndex = currentIndex * cpuInfoView.count / processorCount;
+            if (cpuInfoView.processorCount > 0)
+                cpuInfoView.currentIndex = currentIndex * cpuInfoView.count / cpuInfoView.processorCount;
         }
         function processorModel(a) {
             var procModel = [];
-            for (var i = 0; i < processorCount; i++)
+            for (var i = 0; i < cpuInfoView.processorCount; i++)
                 procModel.push("processor " + i);
 
             return procModel;

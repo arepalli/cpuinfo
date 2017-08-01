@@ -12,6 +12,7 @@ import QtQuick.Controls 2.1
 
 ItemDelegate {
     id: delegate
+    property int maxKeyColumnWidth: 150
     contentItem: Row {
         id: row
         height: valueLabel.height
@@ -19,7 +20,7 @@ ItemDelegate {
 
         Label {
             id: keyLabel
-            width: 150 // TODO: find max key string width
+            width: maxKeyColumnWidth + spacing
             text: key
             elide: Text.ElideRight
             horizontalAlignment: Text.AlignRight

@@ -33,10 +33,19 @@ public:
     Q_INVOKABLE QVariantMap get(int row) const;
     Q_INVOKABLE void append(const QString &processor, const QString &key, const QString  &value);
     Q_INVOKABLE void set(int row, const QString &processor, const QString &key, const QString  &value);
-    Q_INVOKABLE void remove(int row);
+    Q_PROPERTY(quint32 processorCount READ processorCount WRITE setProcessorCount NOTIFY processorCountChanged)
+    Q_PROPERTY(QStringList keys READ keys NOTIFY keysChanged)
+
+    QStringList keys() const;
+    quint32 processorCount() const;
+    void setProcessorCount(quint32 processorCount);
 
 public slots:
     void updateCPUInfo();
+
+signals:
+    void processorCountChanged();
+    void keysChanged();
 
 private:
     struct CpuInfo {
@@ -47,7 +56,8 @@ private:
 
     QFileSystemWatcher m_fileWatcher;
     QList<CpuInfo> m_cpuInfoList;
-
+    quint32 m_processorCount;
+    QStringList m_keys;
 };
 
 #endif // CPUINFOMODEL_H

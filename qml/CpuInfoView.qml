@@ -9,10 +9,13 @@
 import QtQuick 2.5
 import QtQuick.Controls 2.1
 import Backend 1.0
+import "qrc:/js/ColumnHelper.js" as ColumnHelper
 
 ListView {
     id: listView
 
+    property alias processorCount: cpuInfoModel.processorCount
+    property int maxKeyWidth: ColumnHelper.getMaxKeyWidth(cpuInfoModel.keys, listView)
     focus: true
     boundsBehavior: Flickable.StopAtBounds
     interactive: true
@@ -26,6 +29,7 @@ ListView {
     delegate: CpuInfoListDelegate {
         id: delegate
         width: listView.width
+        maxKeyColumnWidth: maxKeyWidth
     }
 
     model: CpuInfoModel {
@@ -33,4 +37,5 @@ ListView {
     }
 
     ScrollBar.vertical: ScrollBar { }
+
 }

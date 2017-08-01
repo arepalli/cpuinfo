@@ -1,8 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>qml/cpuinfo.qml</file>
-        <file>qml/CpuInfoListDelegate.ui.qml</file>
-        <file>qml/CpuInfoView.ui.qml</file>
-        <file>qml/SectionDelegate.ui.qml</file>
+        <file>qml/CpuInfoListDelegate.qml</file>
+        <file>qml/SectionDelegate.qml</file>
+        <file>js/ColumnHelper.js</file>
+        <file>qml/CpuInfoView.qml</file>
     </qresource>
 </RCC>

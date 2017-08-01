@@ -40,6 +40,7 @@ ApplicationWindow {
         id: procSelectionComboBox
         model: processorModel()
         opacity: 0.75
+        visible: cpuInfoView.processorCount > 0
         anchors.margins: 10
         anchors.right: parent.right
         anchors.bottom: parent.bottom
@@ -54,5 +55,12 @@ ApplicationWindow {
 
             return procModel;
         }
+    }
+    Label {
+        visible: cpuInfoView.processorCount === 0
+        anchors.fill: parent
+        text: qsTr("No /proc/cpuinfo found!");
+        horizontalAlignment: Text.AlignHCenter
+        verticalAlignment: Text.AlignVCenter
     }
 }

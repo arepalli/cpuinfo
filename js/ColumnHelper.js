@@ -13,7 +13,7 @@ function getMaxKeyWidth(list, parent)
         if (data.length) {
             try {
                 var textElement = Qt.createQmlObject(
-                'import QtQuick 5.5;'
+                'import QtQuick 2.5;'
                 + 'import QtQuick.Controls 2.1;'
                 + 'Label {'
                 + ' text: "' + data + '"; '

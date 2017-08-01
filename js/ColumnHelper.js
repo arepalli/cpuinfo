@@ -1,5 +1,8 @@
 function getMaxKeyWidth(list, parent)
 {
+    if (list === null || parent === null)
+        return 0;
+
     var maxColumnWidth = 0;
      for (var i = 0; i < list.length; i++)
      {

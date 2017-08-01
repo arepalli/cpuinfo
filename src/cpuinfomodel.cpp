@@ -96,7 +96,7 @@ void CpuInfoModel::setProcessorCount(quint32 processorCount)
 }
 
 /**
- * @brief getCPUInfo
+ * @brief updateCPUInfo
  * This function gets the cpuinfo located in /proc/cpuInfo file and format the each entry found in the file
  * @return
  * Returns list of QStrings. Each item in the list represent one entry from cpuInfo file

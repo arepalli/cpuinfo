@@ -15,7 +15,7 @@ ApplicationWindow {
     visible: true
 
     width: 600
-    height: 480
+    height: 800
 
     title: qsTr("Cpu Info")
 

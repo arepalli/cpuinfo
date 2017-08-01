@@ -151,5 +151,5 @@ void CpuInfoModel::updateCPUInfo()
     }
 
     setProcessorCount(processorCount);
-    qDebug() << "updateCPUInfo, processorCount: " << processorCount;
+    //qDebug() << "updateCPUInfo, processorCount: " << processorCount;
 }

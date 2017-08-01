@@ -19,7 +19,7 @@ ApplicationWindow {
 
     title: qsTr("Cpu Info")
 
-    CpuInfoView {
+    CpuInfoListView {
         id: cpuInfoView
         anchors.fill: parent
         width: parent.width - 20

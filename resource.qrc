@@ -4,6 +4,6 @@
         <file>qml/CpuInfoListDelegate.qml</file>
         <file>qml/SectionDelegate.qml</file>
         <file>js/ColumnHelper.js</file>
-        <file>qml/CpuInfoView.qml</file>
+        <file>qml/CpuInfoListView.qml</file>
     </qresource>
 </RCC>
